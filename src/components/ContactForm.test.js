@@ -9,3 +9,13 @@ test('renders labels?', () => {
 
     expect(firstNameLabel).toBeInTheDocument();
 });
+
+test('inputs registering?', () => {
+    const {getByLabelText} = render(<ContactForm />);
+
+    const firstNameInput = getByLabelText(/first name/i)
+
+    fireEvent.change( firstNameInput, {target: {value: 'testing first name'}})
+
+    expect(firstNameInput.value).toBe('testing first name')
+})
