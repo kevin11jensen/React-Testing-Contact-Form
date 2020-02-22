@@ -39,7 +39,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="email" placeholder="bluebill1049@hotmail.com">
-            Email*
+            Email
           </label>
           <input name="email" ref={register({ required: true })} />
           {errors.email && (

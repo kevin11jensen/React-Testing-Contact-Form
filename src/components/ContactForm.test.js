@@ -7,8 +7,8 @@ test('renders labels?', () => {
 
     const firstNameLabel = getByLabelText(/First Name/i)
     const lastNameLabel = getByLabelText(/Last Name/i)
-    const emailLabel = getByLabelText(/email/i)
-    const messageLabel = getByLabelText(/message/i)
+    const emailLabel = getByLabelText(/Email/i)
+    const messageLabel = getByLabelText(/Message/i)
 
     expect(firstNameLabel).toBeInTheDocument();
     expect(lastNameLabel).toBeInTheDocument();
@@ -19,10 +19,10 @@ test('renders labels?', () => {
 test('inputs registering?', () => {
     const {getByLabelText} = render(<ContactForm />);
 
-    const firstNameInput = getByLabelText(/first name/i)
-    const lastNameInput = getByLabelText(/first name/i)
-    const emailInput = getByLabelText(/email/i)
-    const messageInput = getByLabelText(/message/i)
+    const firstNameInput = getByLabelText(/First Name/i)
+    const lastNameInput = getByLabelText(/Last Name/i)
+    const emailInput = getByLabelText(/Email/i)
+    const messageInput = getByLabelText(/Message/i)
 
     fireEvent.change( firstNameInput, {target: {value: 'testing first name'}})
     fireEvent.change( lastNameInput, {target: {value: 'testing last name'}})
